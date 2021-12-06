@@ -3,7 +3,7 @@
 *.vs
 *.pdb
 DirectX/DirectX/Debug/
-
+DirectX/DirectX/x64/
 
 
 # --- 自分のファイル ---
