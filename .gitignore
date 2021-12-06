@@ -1,0 +1,10 @@
+
+# --- ViualStudio ---
+*.vs
+*.pdb
+DirectX/DirectX/Debug/
+
+
+
+# --- 自分のファイル ---
+DirectX/提出/
