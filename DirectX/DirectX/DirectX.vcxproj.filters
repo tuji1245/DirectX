@@ -46,6 +46,9 @@
     <Filter Include="Shader\2D">
       <UniqueIdentifier>{fcb39122-451e-4912-9f4c-df43d941cf03}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shader\3D">
+      <UniqueIdentifier>{7ad8f146-1e17-4146-bb9a-d7b74006fcfe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scripts\StartUp.cpp">
@@ -200,6 +203,12 @@
     </FxCompile>
     <FxCompile Include="Shader\2D\DefaultPS.hlsl">
       <Filter>Shader\2D</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\3D\SamplePS.hlsl">
+      <Filter>Shader\3D</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\3D\SampleVS.hlsl">
+      <Filter>Shader\3D</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

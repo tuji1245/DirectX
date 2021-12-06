@@ -17,10 +17,14 @@ public:
 	void Update();
 	void Terminate();
 
+	XMFLOAT4X4 GetWorld() { return m_mtxWorld; }
+	XMFLOAT4X4 GetView() { return m_mtxView; }
+	XMFLOAT4X4 GetProj() { return m_mtxProj; }
+
 private:
 	XMFLOAT3 m_targetPos;	//! 見ている対象の位置
 	XMFLOAT3 m_pos;			//! 自身の位置
-	XMFLOAT3 m_upVec;			//! アップベクトル
+	XMFLOAT3 m_upVec;		//! アップベクトル
 
 	float m_fAspectRatio;	//! アスペクト比
 	float m_fFovY;			//! 視野角

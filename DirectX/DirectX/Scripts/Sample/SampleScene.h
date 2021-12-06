@@ -16,6 +16,9 @@ private:
 	VertexShader* m_pDefaultVS;
 	PixelShader* m_pDefaultPS;
 	//InputLayout* m_pInputLayout;
+	VertexShader* m_pSampleVS;
+	PixelShader* m_pSamplePS;
+
 
 	DXBuffer* m_pPrimitive;
 
