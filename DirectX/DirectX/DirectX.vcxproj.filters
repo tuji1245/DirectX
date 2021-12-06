@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{d09991f3-0526-4eba-b4f6-952cf65bafa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Camera">
+      <UniqueIdentifier>{7985ae85-d8b2-457c-b55e-fa54c086fb75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Component">
+      <UniqueIdentifier>{de1e7c40-fda3-4751-9da5-c4c855693d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Object">
+      <UniqueIdentifier>{2f4b5cf2-8296-47c9-a8c7-5ab81f51ebfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\System">
+      <UniqueIdentifier>{4b7533e1-c8b3-4871-a68e-a4a681e2c1ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{f56330bd-9edc-41b6-8a62-af19367cd3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\MyImgui">
+      <UniqueIdentifier>{f8a66e2f-e3c8-4cdc-94f5-ea1f07579657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{fb02b6bd-ba36-4f19-866b-12912f0e1ccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Title">
+      <UniqueIdentifier>{19c78857-471f-4057-9d63-7ce9d2cdafb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts\Sample">
+      <UniqueIdentifier>{a444ffa7-fac6-49ab-bb24-af9be4ded69b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\2D">
+      <UniqueIdentifier>{fcb39122-451e-4912-9f4c-df43d941cf03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Scripts\StartUp.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\DemoImgui.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\DX11Manager.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\FrameManager.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\main.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Camera\Camera.cpp">
+      <Filter>Scripts\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Comprnent\Component.cpp">
+      <Filter>Scripts\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Object\Object.cpp">
+      <Filter>Scripts\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\System\input.cpp">
+      <Filter>Scripts\System</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\MyImgui\DebugWindow.cpp">
+      <Filter>Scripts\MyImgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\MyImgui\DebugWindowManager.cpp">
+      <Filter>Scripts\MyImgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\Sample\SampleScene.cpp">
+      <Filter>Scripts\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\System\Scene.cpp">
+      <Filter>Scripts\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\System\Shader.cpp">
+      <Filter>Scripts\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripts\System\DXBuffer.cpp">
+      <Filter>Scripts\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Scripts\DemoImgui.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\DX11Manager.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\FrameManager.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\main.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Camera\Camera.h">
+      <Filter>Scripts\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Comprnent\Component.h">
+      <Filter>Scripts\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Object\Object.h">
+      <Filter>Scripts\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\System\input.h">
+      <Filter>Scripts\System</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\MyImgui\DebugWindow.h">
+      <Filter>Scripts\MyImgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\MyImgui\DebugWindowManager.h">
+      <Filter>Scripts\MyImgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\System\Scene.h">
+      <Filter>Scripts\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Title\TitleScene.h">
+      <Filter>Scripts\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\Sample\SampleScene.h">
+      <Filter>Scripts\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\System\Shader.h">
+      <Filter>Scripts\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\System\DXBuffer.h">
+      <Filter>Scripts\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\imgui.ini">
+      <Filter>Scripts</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shader\2DPipeLine.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\2D\DefaultVS.hlsl">
+      <Filter>Shader\2D</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\2D\DefaultPS.hlsl">
+      <Filter>Shader\2D</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
