@@ -2,9 +2,5 @@
 # --- ViualStudio ---
 *.vs
 *.pdb
-DirectX/DirectX/Debug/
-DirectX/DirectX/x64/
-
-
-# --- 自分のファイル ---
-DirectX/提出/
+DirectXProject/DirectXProject/Debug/
+DirectXProject/DirectXProject/x64/
