@@ -4,7 +4,7 @@
 #include <assert.h>
 #include <Windows.h>
 
-#define APP_TITLE "Title"
+#define APP_TITLE "No Title"
 
 // âÊñ ÉTÉCÉY
 #define SCREEN_WIDTH (1280)

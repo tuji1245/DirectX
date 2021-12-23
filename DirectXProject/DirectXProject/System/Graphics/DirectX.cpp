@@ -107,7 +107,7 @@ HRESULT InitDX(HWND hWnd, UINT width, UINT height, bool fullscreen)
 	if (FAILED(hr)) { return hr; }
 	// バックバッファへのポインタを指定してレンダーターゲットビューを作成
 	hr = g_pDevice->CreateRenderTargetView(pBackBuffer, NULL, &g_pRenderTarget);
-	SAFE_RELEASE(pBackBuffer);
+	safe_release(pBackBuffer);
 	if (FAILED(hr)) { return hr; }
 
 	//--- 深度バッファの作成
@@ -228,7 +228,7 @@ HRESULT InitDX(HWND hWnd, UINT width, UINT height, bool fullscreen)
 	if (FAILED(hr))
 		return hr;
 	g_pContext->PSSetSamplers(0, 1, &pSampler);
-	SAFE_RELEASE(pSampler);
+	safe_release(pSampler);
 
 	//--- ラスタライズ
 	D3D11_RASTERIZER_DESC rasterDesc = {};
@@ -262,22 +262,22 @@ void UninitDX()
 {
 	for (int i = 0; i < BLEND_MAX; ++i)
 	{
-		SAFE_RELEASE(g_pBlendState[i]);
+		safe_release(g_pBlendState[i]);
 	}
 
-	SAFE_RELEASE(g_pRasterizer[0]);
-	SAFE_RELEASE(g_pRasterizer[1]);
+	safe_release(g_pRasterizer[0]);
+	safe_release(g_pRasterizer[1]);
 
-	SAFE_RELEASE(g_pDepthStencil);
-	SAFE_RELEASE(g_pRenderTarget);
+	safe_release(g_pDepthStencil);
+	safe_release(g_pRenderTarget);
 
 	g_pContext->ClearState();
-	SAFE_RELEASE(g_pContext);
+	safe_release(g_pContext);
 
 	g_pSwapChain->SetFullscreenState(false, NULL);
-	SAFE_RELEASE(g_pSwapChain);
+	safe_release(g_pSwapChain);
 
-	SAFE_RELEASE(g_pDevice);
+	safe_release(g_pDevice);
 }
 
 

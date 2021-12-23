@@ -47,15 +47,15 @@ HRESULT Text::Create(int textCount)
 	{
 		m_textCount = textCount;
 	}
-	SAFE_DELETE_ARRAY(pIdx);
+	safe_delete_array(pIdx);
 
 	return hr;
 }
 
 void Text::Release()
 {
-	SAFE_DELETE(m_pBuffer);
-	SAFE_DELETE_ARRAY(m_pVertex);
+	safe_delete(m_pBuffer);
+	safe_delete_array(m_pVertex);
 }
 
 void Text::SetPos(const DirectX::XMFLOAT3& pos)

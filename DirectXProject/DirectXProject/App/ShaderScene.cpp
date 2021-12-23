@@ -160,7 +160,7 @@ HRESULT ShaderScene::Load()
 	hr = m_pNormalMapTexture->Load("Assets/stoneRoadN1.png");
 	if (FAILED(hr)) { return hr; }
 	m_pRampTexture = new TextureFromFile;
-	hr = m_pRampTexture->Load("Assets/stoneRoadN1.png");
+	hr = m_pRampTexture->Load("Assets/RampTex.bmp");
 	if (FAILED(hr)) { return hr; }
 
 
@@ -188,33 +188,33 @@ HRESULT ShaderScene::Load()
 }
 void ShaderScene::Release()
 {
-	SAFE_DELETE(m_pTangentModel);
-	SAFE_DELETE(m_pModelTown);
-	SAFE_DELETE(m_pModel);
+	safe_delete(m_pTangentModel);
+	safe_delete(m_pModelTown);
+	safe_delete(m_pModel);
 
-	SAFE_DELETE(m_pRampTexture);
-	SAFE_DELETE(m_pNormalMapTexture);
-	SAFE_DELETE(m_pDissolveTexture);
-	SAFE_DELETE(m_pScarTexture);
-	SAFE_DELETE(m_pTexture);
+	safe_delete(m_pRampTexture);
+	safe_delete(m_pNormalMapTexture);
+	safe_delete(m_pDissolveTexture);
+	safe_delete(m_pScarTexture);
+	safe_delete(m_pTexture);
 
-	SAFE_DELETE(m_pToonOutlinesPS);
-	SAFE_DELETE(m_pToonPS);
-	SAFE_DELETE(m_pBumpPS);
-	SAFE_DELETE(m_pDissolvePS);
-	SAFE_DELETE(m_pMultiTexturePS);
-	SAFE_DELETE(m_pFogPS);
-	SAFE_DELETE(m_pLimlightPS);
-	SAFE_DELETE(m_pPhongPS);
-	SAFE_DELETE(m_pLambertPS);
-	SAFE_DELETE(m_pSepiaPS);
-	SAFE_DELETE(m_pSamplePS);
+	safe_delete(m_pToonOutlinesPS);
+	safe_delete(m_pToonPS);
+	safe_delete(m_pBumpPS);
+	safe_delete(m_pDissolvePS);
+	safe_delete(m_pMultiTexturePS);
+	safe_delete(m_pFogPS);
+	safe_delete(m_pLimlightPS);
+	safe_delete(m_pPhongPS);
+	safe_delete(m_pLambertPS);
+	safe_delete(m_pSepiaPS);
+	safe_delete(m_pSamplePS);
 
-	SAFE_DELETE(m_pToonOutlineVS);
-	SAFE_DELETE(m_pBumpVS);
-	SAFE_DELETE(m_pSampleVS);
-	SAFE_DELETE(m_pMatrixCB);
-	SAFE_DELETE(m_pPrimitive);
+	safe_delete(m_pToonOutlineVS);
+	safe_delete(m_pBumpVS);
+	safe_delete(m_pSampleVS);
+	safe_delete(m_pMatrixCB);
+	safe_delete(m_pPrimitive);
 }
 void ShaderScene::Update(float tick)
 {

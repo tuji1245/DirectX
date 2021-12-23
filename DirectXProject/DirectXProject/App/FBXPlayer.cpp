@@ -174,8 +174,8 @@ bool FBXPlayer::Load(const char* fileName)
 		}
 		m_pBuffers[meshIt - mesh.begin()].Create(desc);
 
-		SAFE_DELETE_ARRAY(desc.pVtx);
-		SAFE_DELETE_ARRAY(desc.pIdx);
+		safe_delete_array(desc.pVtx);
+		safe_delete_array(desc.pIdx);
 
 		++meshIt;
 	}

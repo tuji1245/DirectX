@@ -156,15 +156,15 @@ HRESULT InitGeometory()
 }
 void UninitGeometory()
 {
-	SAFE_DELETE(g_pLines);
-	SAFE_DELETE(g_pPolygon);
-	SAFE_DELETE(g_pCube);
-	SAFE_DELETE(g_pGeometoryVS[0]);
-	SAFE_DELETE(g_pGeometoryVS[1]);
-	SAFE_DELETE(g_pGeometoryPS[0]);
-	SAFE_DELETE(g_pGeometoryPS[1]);
-	SAFE_DELETE(g_pMatrixCB);
-	SAFE_DELETE(g_pMaterialCB);
+	safe_delete(g_pLines);
+	safe_delete(g_pPolygon);
+	safe_delete(g_pCube);
+	safe_delete(g_pGeometoryVS[0]);
+	safe_delete(g_pGeometoryVS[1]);
+	safe_delete(g_pGeometoryPS[0]);
+	safe_delete(g_pGeometoryPS[1]);
+	safe_delete(g_pMatrixCB);
+	safe_delete(g_pMaterialCB);
 }
 
 void AddLine(const DirectX::XMFLOAT3& start, const DirectX::XMFLOAT3& end, const DirectX::XMFLOAT4 color)

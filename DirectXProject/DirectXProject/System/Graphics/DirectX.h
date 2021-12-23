@@ -5,10 +5,31 @@
 
 #pragma comment(lib, "d3d11.lib")
 
-#define SAFE_RELEASE(p) do{if(p){p->Release(); p = nullptr;}}while(0)
-#define SAFE_DELETE(p) do{if(p){delete p; p = nullptr;}}while(0)
-#define SAFE_DELETE_ARRAY(p) do{if(p){delete[] p; p = nullptr;}}while(0)
+template <class T>
+inline void safe_release(T*& p)
+{
+	if (p) {
+		p->Release();
+		p = nullptr;
+	}
+}
+template <class T>
+inline void safe_delete(T*& p) 
+{
+	if (p) {
+		delete p;
+		p = nullptr;
+	}
+}
 
+template <class T>
+inline void safe_delete_array(T*& p) 
+{
+	if (p) {
+		delete[] p;
+		p = nullptr;
+	}
+}
 
 enum BlendMode
 {

@@ -247,11 +247,11 @@ Font::Info Font::CreateInfo(const Code &code)
 	GraphicsTexture *pRegTex = TEXTURE->Register(codeKey, pTexture);
 	if (pRegTex != pTexture)
 	{
-		SAFE_DELETE(pTexture);
+		safe_delete(pTexture);
 		pTexture = dynamic_cast<GraphicsTextureGenerate*>(pRegTex);
 	}
 	info.pTexture = pTexture;
-	SAFE_DELETE_ARRAY(pTex);
+	safe_delete_ARRAY(pTex);
 
 	DeleteObject(hBitMap);
 	DeleteDC(memDC);

@@ -86,7 +86,7 @@ TextureRenderTarget::TextureRenderTarget()
 
 TextureRenderTarget::~TextureRenderTarget()
 {
-	SAFE_DELETE(m_pRTV);
+	safe_delete(m_pRTV);
 }
 
 HRESULT TextureRenderTarget::Create(DXGI_FORMAT format, UINT width, UINT height)

@@ -10,8 +10,8 @@ TangentModel::TangentModel()
 }
 TangentModel::~TangentModel()
 {
-	SAFE_DELETE_ARRAY(m_pVtx);
-	SAFE_DELETE(m_pBuffer);
+	safe_delete_array(m_pVtx);
+	safe_delete(m_pBuffer);
 }
 HRESULT TangentModel::Make(MakeDesc desc)
 {
@@ -45,7 +45,7 @@ HRESULT TangentModel::Make(MakeDesc desc)
 		faceNum = (useIndex ? desc.bufDesc.idxCount : desc.bufDesc.vtxCount) - 2;
 		break;
 	default:
-		SAFE_DELETE_ARRAY(m_pVtx);
+		safe_delete_array(m_pVtx);
 		return E_FAIL; // 未対応
 	}
 	// 面ごとに接ベクトルを計算
@@ -55,7 +55,7 @@ HRESULT TangentModel::Make(MakeDesc desc)
 		UINT index[3];
 		if (FAILED(CalcIndex(index, desc.bufDesc, i)))
 		{
-			SAFE_DELETE_ARRAY(m_pVtx);
+			safe_delete_array(m_pVtx);
 			return E_FAIL;
 		}
 		
@@ -107,8 +107,8 @@ HRESULT TangentModel::Make(MakeDesc desc)
 	HRESULT hr = m_pBuffer->Create(bufDesc);
 	if (FAILED(hr))
 	{
-		SAFE_DELETE_ARRAY(m_pVtx);
-		SAFE_DELETE(m_pBuffer);
+		safe_delete_array(m_pVtx);
+		safe_delete(m_pBuffer);
 		return hr;
 	}
 

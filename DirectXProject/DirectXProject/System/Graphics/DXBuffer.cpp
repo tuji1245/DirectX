@@ -7,8 +7,8 @@ DXBuffer::DXBuffer()
 }
 DXBuffer::~DXBuffer()
 {
-	SAFE_RELEASE(m_pIdxBuffer);
-	SAFE_RELEASE(m_pVtxBuffer);
+	safe_release(m_pIdxBuffer);
+	safe_release(m_pVtxBuffer);
 }
 
 HRESULT DXBuffer::Create(const Desc& desc)

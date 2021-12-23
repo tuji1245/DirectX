@@ -19,10 +19,10 @@ cbuffer Matrix : register(b0)
 	float4x4 view;
 	float4x4 proj;
 };
-cbuffer Camera; register(b1)
+cbuffer Camera : register(b1)
 {
 	float4 eyePos;
-}
+};
 
 VS_OUT main(VS_IN vin)
 {
@@ -38,7 +38,7 @@ VS_OUT main(VS_IN vin)
 	// 輪郭線として表示するため、法線方向にモデルを大きくする。
 	// また、カメラとの距離に応じて、法線方向への移動量を変える事によって
 	// カメラが離れても一定の太さで輪郭線が表示される
-	float margin = distance / 250.f;
+	float margin = distance / 100.f;
 	vout.pos.xyz += normalize(vin.normal) * margin;
 
 	vout.pos = mul(vout.pos, world);

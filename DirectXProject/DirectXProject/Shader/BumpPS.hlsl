@@ -22,8 +22,10 @@ float4 main(PS_IN pin) : SV_TARGET
 	// ピクセルシェーダで行うと計算量が増える。
 	// そのため、ワールド空間のライトをテクスチャ空間に移動させて計算を行う。
 	// ライトをテクスチャ空間に移動する処理を頂点シェーダで行うため計算量が少なくなる
+	float3 L = normalize(pin.texSpaceLight);
 
-	float diffuse = dot(N, texSpaceLight);
+
+	float diffuse = dot(N, -L);
 	diffuse = (diffuse + 1.0f) * 0.5f;
 	color *= diffuse;
 

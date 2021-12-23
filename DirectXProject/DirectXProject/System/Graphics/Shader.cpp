@@ -72,7 +72,7 @@ void VertexShader::ReleaseInputLayout()
 	ILList::iterator it = m_ilList.begin();
 	while (it != m_ilList.end())
 	{
-		SAFE_RELEASE((it->second));
+		safe_release((it->second));
 		++it;
 	}
 }
@@ -85,7 +85,7 @@ VertexShader::VertexShader()
 }
 VertexShader::~VertexShader()
 {
-	SAFE_RELEASE(m_pVS);
+	safe_release(m_pVS);
 }
 void VertexShader::Bind(void)
 {
@@ -196,7 +196,7 @@ HRESULT VertexShader::MakeShader(void* pData, UINT size)
 		}
 	}
 
-	SAFE_DELETE_ARRAY(pInputDesc);
+	safe_delete_array(pInputDesc);
 	return hr;
 }
 //----------
@@ -208,7 +208,7 @@ PixelShader::PixelShader()
 }
 PixelShader::~PixelShader()
 {
-	SAFE_RELEASE(m_pPS);
+	safe_release(m_pPS);
 }
 void PixelShader::Bind(void)
 {
@@ -231,7 +231,7 @@ ConstantBuffer::ConstantBuffer()
 }
 ConstantBuffer::~ConstantBuffer()
 {
-	SAFE_RELEASE(m_pBuffer);
+	safe_release(m_pBuffer);
 }
 HRESULT ConstantBuffer::Create(UINT size)
 {

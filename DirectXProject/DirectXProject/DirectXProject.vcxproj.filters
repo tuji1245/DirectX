@@ -55,6 +55,12 @@
     <Filter Include="ソース ファイル\System\Graphics">
       <UniqueIdentifier>{456210d8-a0a4-4f2c-a9bb-ab257dcbfdbf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\System\Component">
+      <UniqueIdentifier>{c22a9ed4-4a63-4254-886a-0818f09691b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\System\Component">
+      <UniqueIdentifier>{b84511e8-65f0-4cbc-91c5-f8a110451a36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
@@ -131,6 +137,15 @@
     </ClCompile>
     <ClCompile Include="App\TangentModel.cpp">
       <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Object.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Component\Transform.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Component\Component.cpp">
+      <Filter>ソース ファイル\System\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +226,15 @@
     </ClInclude>
     <ClInclude Include="App\TangentModel.h">
       <Filter>ヘッダー ファイル\App</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Object.h">
+      <Filter>ヘッダー ファイル\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Component\Component.h">
+      <Filter>ヘッダー ファイル\System\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Component\Transform.h">
+      <Filter>ヘッダー ファイル\System\Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

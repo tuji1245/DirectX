@@ -13,8 +13,8 @@ void FBXModel::Reset()
 	MeshList::iterator it = m_meshList.begin();
 	while(it != m_meshList.end())
 	{
-		SAFE_DELETE(it->pSkinList);
-		SAFE_DELETE_ARRAY(it->pVtx);
+		safe_delete(it->pSkinList);
+		safe_delete_array(it->pVtx);
 		++it;
 	}
 	m_meshList.clear();
@@ -157,7 +157,7 @@ HRESULT FBXModel::Load(const char* fileName)
 			desc.pIdx = nullptr;
 		}
 		hr = modelIt->buffer.Create(desc);
-		SAFE_DELETE_ARRAY(desc.pIdx);
+		safe_delete_array(desc.pIdx);
 		if (FAILED(hr)) { break; }
 
 		// 頂点ブレンド情報構築

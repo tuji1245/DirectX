@@ -3,6 +3,8 @@
 
 #include <Windows.h>
 #include <string>
+#include <vector>
+#include <System/Object.h>
 
 #define SCENE_DECLARATION(scene) \
 public:\
@@ -24,8 +26,11 @@ public:
 	virtual void Update(float tick) = 0;
 	virtual void Draw() = 0;
 
+	virtual void EndFrame() final;
+
 private:
 	std::string m_name;
+	std::vector<Object*> m_listpObject;
 };
 
 #endif // __SCENE_BASE_H__
