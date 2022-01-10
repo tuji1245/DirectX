@@ -12,19 +12,27 @@ class Object;
 class Transform : public Component
 {
 public:
-	Transform(Object* pParent);
+	Transform(Object* pObject);
 	~Transform() = default;
 
-	void Init() override;
 	void Update() override;
 
-	Transform* GetChild(int index);
+	Transform* GetChild(uint16_t index);
+	/**
+	* 名前から子オブジェクトを検索
+	*/
 	Transform* FindChild(std::string name);
 
 public:
-	DirectX::XMFLOAT3 m_posittion;
+	// ワールド空間における絶対的な値
+	DirectX::XMFLOAT3 m_position;
 	DirectX::XMFLOAT3 m_scale;
 	DirectX::XMFLOAT3 m_rotate;
+
+	// local ... 親からの相対的な値
+	DirectX::XMFLOAT3 m_localPosition;
+	DirectX::XMFLOAT3 m_localScale;
+	DirectX::XMFLOAT3 m_localRotate;
 
 private:
 	std::vector<Transform*> m_listChildren;

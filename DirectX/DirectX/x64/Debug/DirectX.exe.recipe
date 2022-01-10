@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\vin\Documents\git\directx\DirectX\x64\Debug\DirectX.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\vin\Documents\git\directx\DirectX\DirectX\Assets\shader\2DPipeLine.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\vin\Documents\git\directx\DirectX\DirectX\Assets\shader\DefaultPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\vin\Documents\git\directx\DirectX\DirectX\Assets\shader\DefaultVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\vin\Documents\git\directx\DirectX\DirectX\Assets\shader\SamplePS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\vin\Documents\git\directx\DirectX\DirectX\Assets\shader\SampleVS.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

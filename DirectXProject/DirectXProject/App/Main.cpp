@@ -6,7 +6,7 @@
 #include <System/FBX/FBXLoader.h>
 #include <System/Camera/CameraManager.hpp>
 #include <System/Scene/SceneManager.hpp>
-#include <App/ShaderScene.h>
+#include <System\Scene\SampleScene.h>
 
 #define ASSERT_FAILED(fn) do {\
 hr = fn; \
@@ -24,7 +24,7 @@ HRESULT Init(HWND hWnd, UINT width, UINT height)
 	ggfbx::Initialize();
 	CameraManager::Instantiate();
 	SceneManager::CreateInstance();
-	SCENE->Load<ShaderScene>();
+	SCENE->Load<SampleScene>();
 
 	return hr;
 }

@@ -4,7 +4,7 @@
 // DirectX‚ª’ñ‹Ÿ‚µ‚Ä‚¢‚é
 // ”ŠwŒn‚Ìƒ‰ƒCƒuƒ‰ƒŠ
 #include <DirectXMath.h>
-#include "Shader.h"
+#include <System\Graphics\Shader.h>
 
 class Camera
 {

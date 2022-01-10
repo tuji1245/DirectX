@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,14 +12,8 @@
     <Filter Include="ソース ファイル\System">
       <UniqueIdentifier>{4e17ff4f-a004-4e4a-9470-879b9af60429}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\System">
-      <UniqueIdentifier>{76d7d9cf-96c4-4ff5-a5f6-7dfd24ef09cb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\App">
       <UniqueIdentifier>{2c3db676-bf36-4efc-a80a-29f79c26d16f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\App">
-      <UniqueIdentifier>{375453a1-ead7-471e-9fe9-85ec8b5e9c71}</UniqueIdentifier>
     </Filter>
     <Filter Include="リソース ファイル\PixelShader">
       <UniqueIdentifier>{a9755fd2-e8f8-4e2e-854e-68fcfb6a9b68}</UniqueIdentifier>
@@ -34,32 +24,17 @@
     <Filter Include="ソース ファイル\System\FBX">
       <UniqueIdentifier>{4df06ddd-9089-4889-a220-c39188e6b41b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\System\FBX">
-      <UniqueIdentifier>{21c4f333-5ad5-44f1-90b8-b9cbfea0008e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\System\Camera">
       <UniqueIdentifier>{36c7ced8-2c6a-48b3-9e0e-1449cbfa04ee}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\System\Camera">
-      <UniqueIdentifier>{c4c304ca-ece3-437a-a66a-db7d0d889bfc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\System\Scene">
       <UniqueIdentifier>{3c6509d2-6311-445a-b8a1-4faa1d76f5e4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\System\Scene">
-      <UniqueIdentifier>{22c95cd1-a784-4acd-88bc-d963fdf7d31e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\System\Graphics">
-      <UniqueIdentifier>{f634100b-94c9-426f-af05-f84dd4faf4b4}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\System\Graphics">
       <UniqueIdentifier>{456210d8-a0a4-4f2c-a9bb-ab257dcbfdbf}</UniqueIdentifier>
     </Filter>
     <Filter Include="ソース ファイル\System\Component">
       <UniqueIdentifier>{c22a9ed4-4a63-4254-886a-0818f09691b8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\System\Component">
-      <UniqueIdentifier>{b84511e8-65f0-4cbc-91c5-f8a110451a36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -68,9 +43,6 @@
     </ClCompile>
     <ClCompile Include="System\Input.cpp">
       <Filter>ソース ファイル\System</Filter>
-    </ClCompile>
-    <ClCompile Include="App\Main.cpp">
-      <Filter>ソース ファイル\App</Filter>
     </ClCompile>
     <ClCompile Include="System\FBX\FBXLoadAnimation.cpp">
       <Filter>ソース ファイル\System\FBX</Filter>
@@ -86,9 +58,6 @@
     </ClCompile>
     <ClCompile Include="System\FBX\FBXLoadMesh.cpp">
       <Filter>ソース ファイル\System\FBX</Filter>
-    </ClCompile>
-    <ClCompile Include="App\FBXPlayer.cpp">
-      <Filter>ソース ファイル\App</Filter>
     </ClCompile>
     <ClCompile Include="System\Camera\CameraBase.cpp">
       <Filter>ソース ファイル\System\Camera</Filter>
@@ -120,121 +89,127 @@
     <ClCompile Include="System\Graphics\Font.cpp">
       <Filter>ソース ファイル\System\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="System\Scene\SampleScene.cpp">
-      <Filter>ソース ファイル\System\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="System\Scene\SceneBase.cpp">
       <Filter>ソース ファイル\System\Scene</Filter>
     </ClCompile>
     <ClCompile Include="System\Scene\SceneManager.cpp">
       <Filter>ソース ファイル\System\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="App\ShaderScene.cpp">
-      <Filter>ソース ファイル\App</Filter>
-    </ClCompile>
-    <ClCompile Include="App\FBXModel.cpp">
-      <Filter>ソース ファイル\App</Filter>
-    </ClCompile>
-    <ClCompile Include="App\TangentModel.cpp">
-      <Filter>ソース ファイル\App</Filter>
-    </ClCompile>
     <ClCompile Include="System\Object.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="System\Component\Transform.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="System\Component\Component.cpp">
       <Filter>ソース ファイル\System\Component</Filter>
     </ClCompile>
+    <ClCompile Include="App\FBXModel.cpp">
+      <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\FBXPlayer.cpp">
+      <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\Main.cpp">
+      <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+    <ClCompile Include="App\TangentModel.cpp">
+      <Filter>ソース ファイル\App</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Component\Transform.cpp">
+      <Filter>ソース ファイル\System\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Scene\SampleScene.cpp">
+      <Filter>ソース ファイル\System\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="App\ShaderScene.cpp">
+      <Filter>ソース ファイル\System\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Defines.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Input.h">
-      <Filter>ヘッダー ファイル\System</Filter>
-    </ClInclude>
-    <ClInclude Include="App\Main.h">
-      <Filter>ヘッダー ファイル\App</Filter>
-    </ClInclude>
-    <ClInclude Include="System\FBX\FBXLoadBone.h">
-      <Filter>ヘッダー ファイル\System\FBX</Filter>
-    </ClInclude>
-    <ClInclude Include="System\FBX\FBXLoader.h">
-      <Filter>ヘッダー ファイル\System\FBX</Filter>
-    </ClInclude>
-    <ClInclude Include="System\FBX\FBXLoadMaterial.h">
-      <Filter>ヘッダー ファイル\System\FBX</Filter>
-    </ClInclude>
-    <ClInclude Include="System\FBX\FBXLoadMesh.h">
-      <Filter>ヘッダー ファイル\System\FBX</Filter>
-    </ClInclude>
-    <ClInclude Include="System\FBX\FBXLoadAnimation.h">
-      <Filter>ヘッダー ファイル\System\FBX</Filter>
+    <ClInclude Include="App\FBXModel.h">
+      <Filter>ソース ファイル\App</Filter>
     </ClInclude>
     <ClInclude Include="App\FBXPlayer.h">
-      <Filter>ヘッダー ファイル\App</Filter>
+      <Filter>ソース ファイル\App</Filter>
     </ClInclude>
-    <ClInclude Include="System\Camera\CameraBase.h">
-      <Filter>ヘッダー ファイル\System\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Camera\CameraDebug.h">
-      <Filter>ヘッダー ファイル\System\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Camera\CameraManager.hpp">
-      <Filter>ヘッダー ファイル\System\Camera</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\Texture.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\DirectX.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\DXBuffer.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\Geometory.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\Shader.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\Text.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Graphics\Font.h">
-      <Filter>ヘッダー ファイル\System\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Scene\SampleScene.h">
-      <Filter>ヘッダー ファイル\System\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Scene\SceneBase.h">
-      <Filter>ヘッダー ファイル\System\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Scene\SceneManager.hpp">
-      <Filter>ヘッダー ファイル\System\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="System\Singleton.hpp">
-      <Filter>ヘッダー ファイル\System</Filter>
-    </ClInclude>
-    <ClInclude Include="App\ShaderScene.h">
-      <Filter>ヘッダー ファイル\App</Filter>
-    </ClInclude>
-    <ClInclude Include="App\FBXModel.h">
-      <Filter>ヘッダー ファイル\App</Filter>
+    <ClInclude Include="App\Main.h">
+      <Filter>ソース ファイル\App</Filter>
     </ClInclude>
     <ClInclude Include="App\TangentModel.h">
-      <Filter>ヘッダー ファイル\App</Filter>
+      <Filter>ソース ファイル\App</Filter>
     </ClInclude>
-    <ClInclude Include="System\Object.h">
-      <Filter>ヘッダー ファイル\System</Filter>
+    <ClInclude Include="System\Camera\CameraBase.h">
+      <Filter>ソース ファイル\System\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Camera\CameraDebug.h">
+      <Filter>ソース ファイル\System\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Camera\CameraManager.hpp">
+      <Filter>ソース ファイル\System\Camera</Filter>
     </ClInclude>
     <ClInclude Include="System\Component\Component.h">
-      <Filter>ヘッダー ファイル\System\Component</Filter>
+      <Filter>ソース ファイル\System\Component</Filter>
     </ClInclude>
     <ClInclude Include="System\Component\Transform.h">
-      <Filter>ヘッダー ファイル\System\Component</Filter>
+      <Filter>ソース ファイル\System\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FBX\FBXLoadAnimation.h">
+      <Filter>ソース ファイル\System\FBX</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FBX\FBXLoadBone.h">
+      <Filter>ソース ファイル\System\FBX</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FBX\FBXLoader.h">
+      <Filter>ソース ファイル\System\FBX</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FBX\FBXLoadMaterial.h">
+      <Filter>ソース ファイル\System\FBX</Filter>
+    </ClInclude>
+    <ClInclude Include="System\FBX\FBXLoadMesh.h">
+      <Filter>ソース ファイル\System\FBX</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\DirectX.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\DXBuffer.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\Font.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\Geometory.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\Shader.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\Text.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\Texture.h">
+      <Filter>ソース ファイル\System\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Input.h">
+      <Filter>ソース ファイル\System</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Object.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Singleton.hpp">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Scene\SceneBase.h">
+      <Filter>ソース ファイル\System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Scene\SceneManager.hpp">
+      <Filter>ソース ファイル\System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Scene\SampleScene.h">
+      <Filter>ソース ファイル\System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="App\ShaderScene.h">
+      <Filter>ソース ファイル\System\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

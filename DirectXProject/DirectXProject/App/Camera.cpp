@@ -1,5 +1,5 @@
 #include "Camera.h"
-#include "Input.h"
+#include <System\Input.h>
 #include "Defines.h"
 
 const DirectX::XMFLOAT4 CameraInitPos(0, 0, -5.0f, 0);

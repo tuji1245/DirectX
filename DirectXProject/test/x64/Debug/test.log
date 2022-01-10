@@ -1,5 +1,2 @@
 ﻿  main.cpp
-C:\Users\Criff\Documents\git\directx\DirectXProject\test\main.cpp(48,26): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-C:\Users\Criff\Documents\git\directx\DirectXProject\test\main.cpp(56,26): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-C:\Users\Criff\Documents\git\directx\DirectXProject\test\main.cpp(59,26): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
-  test.vcxproj -> C:\Users\Criff\Documents\git\directx\DirectXProject\x64\Debug\test.exe
+  test.vcxproj -> C:\Users\vin\Documents\git\directx\DirectXProject\x64\Debug\test.exe

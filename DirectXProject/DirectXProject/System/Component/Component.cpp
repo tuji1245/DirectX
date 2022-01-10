@@ -1,13 +1,13 @@
 #include"Component.h"
 #include <System\Graphics\DirectX.h>
 
-Component::Component(Object* pParent):
-	m_pParent(pParent),
+Component::Component(Object* pObject):
+	m_pObject(pObject),
 	m_destoroy(false)
 {
 }
 
 Component::~Component()
 {
-	safe_delete(m_pParent);
+	safe_delete(m_pObject);
 }
