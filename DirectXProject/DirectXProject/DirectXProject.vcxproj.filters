@@ -122,6 +122,9 @@
     <ClCompile Include="App\ShaderScene.cpp">
       <Filter>ソース ファイル\System\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="System\Graphics\ShaderList.cpp">
+      <Filter>リソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\FBXModel.h">
@@ -210,6 +213,9 @@
     </ClInclude>
     <ClInclude Include="App\ShaderScene.h">
       <Filter>ソース ファイル\System\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Graphics\ShaderList.h">
+      <Filter>リソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

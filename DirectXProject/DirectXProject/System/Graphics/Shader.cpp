@@ -87,7 +87,7 @@ VertexShader::~VertexShader()
 {
 	safe_release(m_pVS);
 }
-void VertexShader::Bind(void)
+void VertexShader::Bind(void) const
 {
 	ID3D11DeviceContext* pContext =	GetContext();
 	pContext->VSSetShader(m_pVS, NULL, 0);
@@ -210,7 +210,7 @@ PixelShader::~PixelShader()
 {
 	safe_release(m_pPS);
 }
-void PixelShader::Bind(void)
+void PixelShader::Bind(void) const
 {
 	ID3D11DeviceContext* pContext = GetContext();
 	pContext->PSSetShader(m_pPS, nullptr, 0);

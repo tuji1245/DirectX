@@ -34,9 +34,38 @@ bool comp()
 	return false;
 }
 
+
+int List[] = { 0,1,2,3,4 };
+
+int* pList[5];
+void Init()
+{
+	for (int cnt = 0; auto & element : List)
+	{
+		pList[cnt] = List + cnt;
+		cnt++;
+	}
+}
+
+const int*& Get(int index)
+{
+	return pList[index];
+}
+
 int main()
 {
+	using std::cout;
+	using std::endl;
+	Init();
 
+	const int* buff = Get(0);
+	buff = Get(1);
+	for (int cnt = 0; auto& elem : List)
+	{
+		cout << cnt << ": " << &(Get(elem)) << endl;
+		cout << cnt << ": " << &List[cnt] << endl;
+		cnt++;
+	}
 
 	std::system("pause");
 

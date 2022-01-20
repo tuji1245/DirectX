@@ -94,6 +94,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -113,6 +114,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -131,6 +133,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -150,6 +153,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -183,6 +187,7 @@
     <ClCompile Include="System\Graphics\Font.cpp" />
     <ClCompile Include="System\Graphics\Geometory.cpp" />
     <ClCompile Include="System\Graphics\Shader.cpp" />
+    <ClCompile Include="System\Graphics\ShaderList.cpp" />
     <ClCompile Include="System\Graphics\Text.cpp" />
     <ClCompile Include="System\Graphics\Texture.cpp" />
     <ClCompile Include="System\Input.cpp" />
@@ -213,6 +218,7 @@
     <ClInclude Include="System\Graphics\Font.h" />
     <ClInclude Include="System\Graphics\Geometory.h" />
     <ClInclude Include="System\Graphics\Shader.h" />
+    <ClInclude Include="System\Graphics\ShaderList.h" />
     <ClInclude Include="System\Graphics\Text.h" />
     <ClInclude Include="System\Graphics\Texture.h" />
     <ClInclude Include="System\Input.h" />

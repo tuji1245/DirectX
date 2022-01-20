@@ -7,25 +7,28 @@ Scene::Scene(const char* sceneName)
 }
 Scene::~Scene()
 {
+	auto it = m_listpObject.begin();
+	auto end = m_listpObject.end();
+	for (const auto& element : m_listpObject)
+	{
+		delete element;
+	}
+	m_listpObject.clear();
 }
 
 void Scene::EndFrame()
 {
+	// オブジェクト終了処理
+	for (auto it = m_listpObject.begin(); it != m_listpObject.end();)
 	{
-		// オブジェクト終了処理
-		auto it = m_listpObject.begin();
-		auto end = m_listpObject.end();
-		while (it != end)
+		if (!(*it)->DestroyFlag()) [[unlikely]]
 		{
-			if (!(*it)->DestroyFlag())
-			{
-				delete *it;
-				it = m_listpObject.erase(it);
-			}
-			else
-			{
-				++it;
-			}
+			delete *it;
+			it = m_listpObject.erase(it);
+		}
+		else
+		{
+			++it;
 		}
 	}
 }

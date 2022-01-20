@@ -24,7 +24,7 @@ public:
 	HRESULT Compile(const char *pCode, int codeSize);
 
 	// シェーダーを描画に使用
-	virtual void Bind(void) = 0;
+	virtual void Bind(void) const = 0;
 
 protected:
 	// シェーダーファイルを読み込んだ後、シェーダーの種類別に処理を行う
@@ -46,7 +46,7 @@ public:
 
 	VertexShader();
 	~VertexShader();
-	void Bind(void);
+	void Bind(void) const;
 protected:
 	HRESULT MakeShader(void* pData, UINT size);
 
@@ -62,7 +62,7 @@ class PixelShader : public Shader
 public:
 	PixelShader();
 	~PixelShader();
-	void Bind(void);
+	void Bind(void) const;
 protected:
 	HRESULT MakeShader(void* pData, UINT size);
 private:
