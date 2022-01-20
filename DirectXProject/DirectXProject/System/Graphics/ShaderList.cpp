@@ -1,16 +1,18 @@
 #include "ShaderList.h"
 
 using namespace Graphics;
-
-VertexShader* g_vertexShader[static_cast<uint8_t>(VertexShaderType::MAX)];
-PixelShader*  g_pixelShader [static_cast<uint8_t>(PixelShaderType::MAX)];
+namespace 
+{
+	VertexShader* g_vertexShader[static_cast<uint8_t>(VertexShaderType::MAX)];
+	PixelShader*  g_pixelShader [static_cast<uint8_t>(PixelShaderType::MAX)];
+}
 
 HRESULT Graphics::InitShaderList()
 {
 	HRESULT hr = S_OK;
 
 	const std::string entryPath = "Assets/Shader/";
-	const std::string fileType = ",cso";
+	const std::string fileType = ".cso";
 	const std::string vertexShaderPath[] =
 	{
 		"SampleVS"

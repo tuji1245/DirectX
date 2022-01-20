@@ -7,6 +7,7 @@
 #include "Component/Transform.h"
 #include "Graphics/DirectX.h"
 #include <string>
+#include <typeinfo>
 
 class Component;
 class Transform;
@@ -18,8 +19,12 @@ public:
 	virtual ~Object();
 
 
-	virtual void Update() = 0;
-	virtual void Draw() = 0;
+	virtual void Update()
+	{
+	};
+	virtual void Draw()
+	{
+	};
 
 	template<typename T>
 	T* AddComponent();
@@ -58,8 +63,7 @@ T* Object::AddComponent()
 		return nullptr;
 	}
 
-	T* buff = new T;
-	buff->m_pParent = this;
+	T* buff = new T(this);
 	m_listComponent.push_back(buff);
 	return buff;
 }

@@ -1,3 +1,2 @@
 ﻿  main.cpp
-C:\Users\Criff\Documents\git\directx\DirectXProject\test\main.cpp(52,1): error C2440: 'return': 'int *' から 'const int *&' に変換できません。
-C:\Users\Criff\Documents\git\directx\DirectXProject\test\main.cpp(52,20): message : 変換で修飾子が失われます。
+  test.vcxproj -> C:\Users\Criff\Documents\git\directx\DirectXProject\x64\Debug\test.exe

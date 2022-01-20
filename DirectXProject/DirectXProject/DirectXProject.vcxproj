@@ -176,6 +176,7 @@
     <ClCompile Include="System\Camera\CameraDebug.cpp" />
     <ClCompile Include="System\Camera\CameraManager.cpp" />
     <ClCompile Include="System\Component\Component.cpp" />
+    <ClCompile Include="System\Component\Model.cpp" />
     <ClCompile Include="System\Component\Transform.cpp" />
     <ClCompile Include="System\FBX\FBXLoadAnimation.cpp" />
     <ClCompile Include="System\FBX\FBXLoadBone.cpp" />
@@ -191,6 +192,7 @@
     <ClCompile Include="System\Graphics\Text.cpp" />
     <ClCompile Include="System\Graphics\Texture.cpp" />
     <ClCompile Include="System\Input.cpp" />
+    <ClCompile Include="System\Model\ModelList.cpp" />
     <ClCompile Include="System\Object.cpp" />
     <ClCompile Include="System\Scene\SampleScene.cpp" />
     <ClCompile Include="System\Scene\SceneBase.cpp" />
@@ -207,6 +209,7 @@
     <ClInclude Include="System\Camera\CameraDebug.h" />
     <ClInclude Include="System\Camera\CameraManager.hpp" />
     <ClInclude Include="System\Component\Component.h" />
+    <ClInclude Include="System\Component\Model.h" />
     <ClInclude Include="System\Component\Transform.h" />
     <ClInclude Include="System\FBX\FBXLoadAnimation.h" />
     <ClInclude Include="System\FBX\FBXLoadBone.h" />
@@ -222,6 +225,7 @@
     <ClInclude Include="System\Graphics\Text.h" />
     <ClInclude Include="System\Graphics\Texture.h" />
     <ClInclude Include="System\Input.h" />
+    <ClInclude Include="System\Model\ModelList.h" />
     <ClInclude Include="System\Object.h" />
     <ClInclude Include="System\Scene\SampleScene.h" />
     <ClInclude Include="System\Scene\SceneBase.h" />

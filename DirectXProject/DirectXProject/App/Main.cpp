@@ -7,6 +7,7 @@
 #include <System/Camera/CameraManager.hpp>
 #include <System/Scene/SceneManager.hpp>
 #include <System\Scene\SampleScene.h>
+#include <System\Model\ModelList.h>
 
 #define ASSERT_FAILED(fn) do {\
 hr = fn; \
@@ -23,6 +24,7 @@ HRESULT Init(HWND hWnd, UINT width, UINT height)
 	ASSERT_FAILED(InitInput());
 	ggfbx::Initialize();
 	CameraManager::Instantiate();
+	ModelList::CreateInstance();
 	SceneManager::CreateInstance();
 	SCENE->Load<SampleScene>();
 
@@ -32,6 +34,7 @@ HRESULT Init(HWND hWnd, UINT width, UINT height)
 void Uninit()
 {
 	SceneManager::DestroyInstance();
+	ModelList::DestroyInstance();
 	CameraManager::Destroy();
 	ggfbx::Terminate();
 	UninitInput();

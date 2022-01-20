@@ -62,7 +62,7 @@ public:
 	   戻り値、引数を呼び出したい関数と揃えないといけない
 	 メッシュごとに別々の処理を呼び出したいので、引数に関数ポインタを設定 
 	*/
-	void Draw(DrawSettingCallBack CallBackFunc = nullptr);
+	void Draw(DrawSettingCallBack CallBackFunc = nullptr) const;
 
 private:
 	// 全てのメモリを安全に解放するための関数

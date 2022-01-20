@@ -6,8 +6,7 @@ Object::Object(std::string name):
 	m_active(true),
 	m_destoroy(false),
 	m_listComponent()
-{
-	
+{	
 }
 
 Object::~Object()

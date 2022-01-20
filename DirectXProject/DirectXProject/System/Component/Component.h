@@ -10,7 +10,7 @@ public:
 	virtual ~Component();
 
 	virtual void Init() {};
-	virtual void Update() = 0;
+	virtual void Update() {};
 	virtual void Draw() {}
 
 public:

@@ -28,9 +28,11 @@ public:
 
 	virtual void EndFrame() final;
 
+protected:
+	std::vector<Object*> m_listpObject;
+
 private:
 	std::string m_name;
-	std::vector<Object*> m_listpObject;
 };
 
 #endif // __SCENE_BASE_H__

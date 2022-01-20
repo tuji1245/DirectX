@@ -36,6 +36,9 @@
     <Filter Include="ソース ファイル\System\Component">
       <UniqueIdentifier>{c22a9ed4-4a63-4254-886a-0818f09691b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\System\Model">
+      <UniqueIdentifier>{cf7b9131-66f9-45ee-a3af-903e28df432c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Startup.cpp">
@@ -124,6 +127,12 @@
     </ClCompile>
     <ClCompile Include="System\Graphics\ShaderList.cpp">
       <Filter>リソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Model\ModelList.cpp">
+      <Filter>ソース ファイル\System\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="System\Component\Model.cpp">
+      <Filter>ソース ファイル\System\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -216,6 +225,12 @@
     </ClInclude>
     <ClInclude Include="System\Graphics\ShaderList.h">
       <Filter>リソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Model\ModelList.h">
+      <Filter>ソース ファイル\System\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Component\Model.h">
+      <Filter>ソース ファイル\System\Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

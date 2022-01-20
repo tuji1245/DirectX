@@ -179,7 +179,7 @@ HRESULT FBXModel::Load(const char* fileName)
 	return hr;
 }
 
-void FBXModel::Draw(DrawSettingCallBack CallBackFunc)
+void FBXModel::Draw(DrawSettingCallBack CallBackFunc) const
 {
 	// ƒ‚ƒfƒ‹‚Ì•`‰æ
 	for(UINT i = 0; i < m_meshList.size(); ++ i)

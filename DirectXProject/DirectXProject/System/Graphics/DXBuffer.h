@@ -23,7 +23,7 @@ public:
 
 	HRESULT Create(const Desc& desc);
 
-	void Draw();
+	void Draw() const;
 	HRESULT Write(void* pVtx);
 
 private:

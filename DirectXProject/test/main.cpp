@@ -2,70 +2,57 @@
 #include <iostream>
 #include <vector>
 
-class base
+#define TO_STRING(valiablename) # valiablename
+
+class MyEnum
 {
 public:
-	base() = default;
-	virtual ~base() = default;
-};
+	enum class Base
+	{
+		end_of_enum = 0
+	};
 
-class drive : public base
-{
 public:
-	drive() = default;
-	~drive() = default;
+
+	std::vector<std::string> m_list;
+
 };
 
-std::vector<base*> g_listpBase;
-
-template <typename T>
-bool comp()
+class MyEnum2 : public MyEnum
 {
-	for (auto element : g_listpBase)
+	enum class Drive
 	{
-		std::cout << typeid(*element).name() << std::endl;
-		if (typeid(*element) == T)
-		{
-			std::cout << "succes" << std::endl;
-			return true;
-		}
-	}
-	std::cout << "failed" << std::endl;
-	return false;
-}
-
-
-int List[] = { 0,1,2,3,4 };
-
-int* pList[5];
-void Init()
-{
-	for (int cnt = 0; auto & element : List)
-	{
-		pList[cnt] = List + cnt;
-		cnt++;
-	}
-}
-
-const int*& Get(int index)
-{
-	return pList[index];
-}
+		One = static_cast<uint8_t>(Base::end_of_enum),
+		Two,
+	};
+};
 
 int main()
 {
 	using std::cout;
 	using std::endl;
-	Init();
 
-	const int* buff = Get(0);
-	buff = Get(1);
-	for (int cnt = 0; auto& elem : List)
-	{
-		cout << cnt << ": " << &(Get(elem)) << endl;
-		cout << cnt << ": " << &List[cnt] << endl;
-		cnt++;
-	}
+	int* base = new int(1);
+	const int* pointer = base;
+
+	auto printBase = [&]() {
+		cout << "base: " << base << ": " << *base << endl;
+	};
+	auto printPointer = [&]() {
+		if (pointer)
+			cout << "pointer: " << pointer << ": " << *pointer << endl;
+		else
+			cout << "NOOOOO" << endl;
+	};
+
+	printBase();
+	printPointer();
+
+	delete pointer, pointer = nullptr;
+	cout << " -- pointer is deleted -- " << endl;
+
+	printBase();
+	printPointer();
 
 	std::system("pause");
 

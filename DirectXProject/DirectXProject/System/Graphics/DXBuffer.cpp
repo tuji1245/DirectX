@@ -93,7 +93,7 @@ HRESULT DXBuffer::CreateIndexBuffer(const void* pIdx, UINT size, UINT count)
 	return hr;
 }
 
-void DXBuffer::Draw()
+void DXBuffer::Draw() const
 {
 	ID3D11DeviceContext* pContext = GetContext();
 	UINT stride = m_vtxSize;
