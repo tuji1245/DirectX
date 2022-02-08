@@ -1,13 +1,17 @@
 #include "ShaderList.h"
 
-using namespace Graphics;
-namespace 
+ShaderList::ShaderList():
+	m_listVertexShader(),
+	m_listPixelShader()
 {
-	VertexShader* g_vertexShader[static_cast<uint8_t>(VertexShaderType::MAX)];
-	PixelShader*  g_pixelShader [static_cast<uint8_t>(PixelShaderType::MAX)];
 }
 
-HRESULT Graphics::InitShaderList()
+ShaderList::~ShaderList()
+{
+	Release();
+}
+
+HRESULT ShaderList::Load()
 {
 	HRESULT hr = S_OK;
 
@@ -23,17 +27,17 @@ HRESULT Graphics::InitShaderList()
 	};
 
 	// 頂点シェーダ読み込み
-	for (uint8_t cnt = 0; auto& element : vertexShaderPath)
+	for (uint8_t cnt = 0; auto & element : vertexShaderPath)
 	{
-	 	hr = g_vertexShader[cnt]->Load((entryPath + element + fileType).c_str());
+		hr = m_listVertexShader[cnt]->Load((entryPath + element + fileType).c_str());
 		if (FAILED(hr))
 			return hr;
 		cnt++;
 	}
 	// ピクセルシェーダ読み込み
-	for (uint8_t cnt = 0; auto& element : pixelShaderPath)
+	for (uint8_t cnt = 0; auto & element : pixelShaderPath)
 	{
-		hr = g_pixelShader[cnt]->Load((entryPath + element + fileType).c_str());
+		hr = m_listPixelShader[cnt]->Load((entryPath + element + fileType).c_str());
 		if (FAILED(hr))
 			return hr;
 		cnt++;
@@ -41,20 +45,23 @@ HRESULT Graphics::InitShaderList()
 	return hr;
 }
 
-void Graphics::UninitShaderList()
+void ShaderList::Release()
 {
-	for (auto& element : g_vertexShader)
-		safe_delete(element);
-	for (auto& element : g_pixelShader)
-		safe_delete(element);
+	// 解放
+	for (auto& element : m_listVertexShader)
+		element.reset();
+	for (auto& element : m_listPixelShader)
+		element.reset();
 }
 
-inline const VertexShader* Graphics::GetVertexShader(VertexShaderType type)
+std::weak_ptr<const VertexShader> ShaderList::GetVertexShader(VertexShaderType type) const
 {
-	return g_vertexShader[static_cast<uint8_t>(type)];
+	// guess: shard -> weak cast?
+	return m_listVertexShader[static_cast<uint8_t>(type)];
 }
 
-inline const PixelShader* Graphics::GetPixelShader(PixelShaderType type)
+std::weak_ptr<const PixelShader> ShaderList::GetPixelShader(PixelShaderType type) const
 {
-	return g_pixelShader[static_cast<uint8_t>(type)];
+	// guess: shard -> weak cast?
+	return m_listPixelShader[static_cast<uint8_t>(type)];
 }

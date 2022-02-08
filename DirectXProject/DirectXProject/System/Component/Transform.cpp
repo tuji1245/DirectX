@@ -17,11 +17,11 @@ Transform::Transform(Object* pObject):
 
 void Transform::Update()
 {
-	
 }
 
 Transform* Transform::GetChild(uint16_t index)
 {
+	// 範囲外の値は排除
 	if (m_listChildren.size() < index)
 		return nullptr;
 
@@ -30,6 +30,8 @@ Transform* Transform::GetChild(uint16_t index)
 
 Transform* Transform::FindChild(std::string name)
 {
+	// 一致する名前があればそれを返す
+	// maybe: ハッシュ値でやったほうが早い気がする。
 	for (const auto& element : m_listChildren)
 		if (element->m_pObject->m_name == name)
 			return element;

@@ -8,6 +8,7 @@
 #include <System/Scene/SceneManager.hpp>
 #include <System\Scene\SampleScene.h>
 #include <System\Model\ModelList.h>
+#include <System\Graphics\ShaderList.h>
 
 #define ASSERT_FAILED(fn) do {\
 hr = fn; \
@@ -25,6 +26,9 @@ HRESULT Init(HWND hWnd, UINT width, UINT height)
 	ggfbx::Initialize();
 	CameraManager::Instantiate();
 	ModelList::CreateInstance();
+	ModelList::GetInstance()->Load();
+	ShaderList::CreateInstance();
+	ShaderList::GetInstance()->Load();
 	SceneManager::CreateInstance();
 	SCENE->Load<SampleScene>();
 
@@ -34,6 +38,7 @@ HRESULT Init(HWND hWnd, UINT width, UINT height)
 void Uninit()
 {
 	SceneManager::DestroyInstance();
+	ShaderList::DestroyInstance();
 	ModelList::DestroyInstance();
 	CameraManager::Destroy();
 	ggfbx::Terminate();

@@ -1,58 +1,30 @@
 #include <stdio.h>
 #include <iostream>
-#include <vector>
+#include <memory>
 
 #define TO_STRING(valiablename) # valiablename
 
-class MyEnum
+void print(void* vp)
 {
-public:
-	enum class Base
-	{
-		end_of_enum = 0
-	};
-
-public:
-
-	std::vector<std::string> m_list;
-
-};
-
-class MyEnum2 : public MyEnum
-{
-	enum class Drive
-	{
-		One = static_cast<uint8_t>(Base::end_of_enum),
-		Two,
-	};
-};
+	std::cout << "vp: " << vp << std::endl;
+	int* ip = static_cast<int*>(vp);
+	std::cout << "ip: " << ip << std::endl;
+	std::cout << "*ip: " << *ip << std::endl;
+}
 
 int main()
 {
 	using std::cout;
 	using std::endl;
 
-	int* base = new int(1);
-	const int* pointer = base;
+	std::shared_ptr<int> sp = std::make_shared<int>(10);
+	std::weak_ptr<int> wp = sp;
 
-	auto printBase = [&]() {
-		cout << "base: " << base << ": " << *base << endl;
-	};
-	auto printPointer = [&]() {
-		if (pointer)
-			cout << "pointer: " << pointer << ": " << *pointer << endl;
-		else
-			cout << "NOOOOO" << endl;
-	};
+	cout << "sp: " << *sp << endl;
+	cout << "wp: " << *wp.lock() << endl;
 
-	printBase();
-	printPointer();
-
-	delete pointer, pointer = nullptr;
-	cout << " -- pointer is deleted -- " << endl;
-
-	printBase();
-	printPointer();
+	print(&*wp.lock());
+	print(wp.lock().get());
 
 	std::system("pause");
 

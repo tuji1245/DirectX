@@ -176,6 +176,7 @@
     <ClCompile Include="System\Camera\CameraDebug.cpp" />
     <ClCompile Include="System\Camera\CameraManager.cpp" />
     <ClCompile Include="System\Component\Component.cpp" />
+    <ClCompile Include="System\Component\Material.cpp" />
     <ClCompile Include="System\Component\Model.cpp" />
     <ClCompile Include="System\Component\Transform.cpp" />
     <ClCompile Include="System\FBX\FBXLoadAnimation.cpp" />
@@ -209,6 +210,7 @@
     <ClInclude Include="System\Camera\CameraDebug.h" />
     <ClInclude Include="System\Camera\CameraManager.hpp" />
     <ClInclude Include="System\Component\Component.h" />
+    <ClInclude Include="System\Component\Material.h" />
     <ClInclude Include="System\Component\Model.h" />
     <ClInclude Include="System\Component\Transform.h" />
     <ClInclude Include="System\FBX\FBXLoadAnimation.h" />

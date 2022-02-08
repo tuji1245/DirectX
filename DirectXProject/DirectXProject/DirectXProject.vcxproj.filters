@@ -134,6 +134,9 @@
     <ClCompile Include="System\Component\Model.cpp">
       <Filter>ソース ファイル\System\Component</Filter>
     </ClCompile>
+    <ClCompile Include="System\Component\Material.cpp">
+      <Filter>ソース ファイル\System\Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\FBXModel.h">
@@ -230,6 +233,9 @@
       <Filter>ソース ファイル\System\Model</Filter>
     </ClInclude>
     <ClInclude Include="System\Component\Model.h">
+      <Filter>ソース ファイル\System\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="System\Component\Material.h">
       <Filter>ソース ファイル\System\Component</Filter>
     </ClInclude>
   </ItemGroup>

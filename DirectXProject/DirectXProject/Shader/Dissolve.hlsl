@@ -2,8 +2,6 @@
 * A‚Ì‰æ‘œ‚ðB‚Ö•Ï‰»‚³‚¹‚é•\Œ»
 */
 
-
-
 struct PS_IN
 {
 	float4 pos : SV_POSITION;

@@ -11,7 +11,7 @@ Model::~Model()
 
 void Model::Draw()
 {
-	m_model->Draw();
+	m_model.lock()->Draw();
 }
 
 void Model::SetModel(ModelList::Type type)

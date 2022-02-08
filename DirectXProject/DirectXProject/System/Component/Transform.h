@@ -15,11 +15,19 @@ public:
 	Transform(Object* pObject);
 	~Transform() = default;
 
+	// 
 	void Update() override;
 
+	/**
+	* @brief インデックスから子オブジェクトを検索
+	* @param index
+	* @return Transform* 見つけたオブジェクトのトランスフォーム
+	*/
 	Transform* GetChild(uint16_t index);
 	/**
-	* 名前から子オブジェクトを検索
+	* @brief 名前から子オブジェクトを検索
+	* @param name
+	* @return Transform* 見つけたオブジェクトのトランスフォーム
 	*/
 	Transform* FindChild(std::string name);
 

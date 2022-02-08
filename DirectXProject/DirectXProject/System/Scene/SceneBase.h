@@ -25,7 +25,12 @@ public:
 	virtual void Release() = 0;
 	virtual void Update(float tick) = 0;
 	virtual void Draw() = 0;
-
+	/**
+	* @fn
+	* ここに関数の説明を書く
+	* @brief フレーム終了時処理
+	* @detail DestroyFlagを参照してオブジェクト破棄
+	*/
 	virtual void EndFrame() final;
 
 protected:

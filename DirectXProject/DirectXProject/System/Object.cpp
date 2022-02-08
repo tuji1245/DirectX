@@ -13,14 +13,20 @@ Object::~Object()
 {
 	// コンポーネント解放
 	for (auto& it : m_listComponent)
-		delete it;
+		safe_delete(it);
 	m_listComponent.clear();
 }
 
-
-void Object::Destoroy(Object* const& obj)
+void Object::Update()
 {
-	obj->m_destoroy = true;
+}
+
+void Object::Draw()
+{
+}
+
+void Object::OnDestroy()
+{
 }
 
 bool Object::ActiveFlag()
@@ -41,4 +47,9 @@ bool Object::DestroyFlag()
 void Object::DestroyFlag(bool flag)
 {
 	m_destoroy = flag;
+}
+
+void Object::Destoroy(Object* const& obj)
+{
+	obj->m_destoroy = true;
 }
