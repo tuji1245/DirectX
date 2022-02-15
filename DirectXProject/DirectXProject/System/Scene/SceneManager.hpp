@@ -15,6 +15,7 @@ public:
 public:
 	void Update(float tick);
 	void Draw();
+	void EndFrame();
 
 	template<class T> HRESULT Load();
 

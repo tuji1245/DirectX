@@ -37,8 +37,9 @@ public:
 
 	// コンポーネント関数群
 	/**
-	* @brief オブジェクトにコンポーネントを追加する
+	* @brief Componentを継承したクラスを追加する
 	* @return T 成功で追加したコンポーネント、失敗でnullptrが返る
+	* @details Componetを継承していないクラスす追加しようとするとコンパイルエラーを起こす
 	* @note 同じコンポーネントは複数持てない。
 	*		今後複数持てるコンポーネントも追加する予定
 	*/
@@ -79,11 +80,6 @@ private:
 template<typename T>
 T* Object::AddComponent()
 {
-	// コンポーネントでないものを排除
-	// guess: コンパイル時エラーの法がいい？
-	if (std::is_base_of(Component, T) == false)
-		return nullptr;
-
 	for (const auto& element : m_listComponent)
 	{// 同じコンポーネントを排除
 		if (typeid(*element) != typeid(T)) continue;

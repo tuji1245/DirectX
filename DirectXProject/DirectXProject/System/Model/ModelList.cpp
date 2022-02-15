@@ -28,9 +28,11 @@ HRESULT ModelList::Load()
 		if (FAILED(hr)) [[unlikely]]
 		{
 			// TODO: Ž¸”sŽž‚Ç‚¤‚·‚é‚©
+			break;
 		}
 		cnt++;
 	}
+	return hr;
 }
 
 void ModelList::Release()

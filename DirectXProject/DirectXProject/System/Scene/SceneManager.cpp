@@ -24,3 +24,8 @@ void SceneManager::Draw()
 {
 	m_pScene->Draw();
 }
+
+void SceneManager::EndFrame()
+{
+	m_pScene->EndFrame();
+}

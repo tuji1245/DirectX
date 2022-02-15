@@ -29,6 +29,7 @@ HRESULT ShaderList::Load()
 	// 頂点シェーダ読み込み
 	for (uint8_t cnt = 0; auto & element : vertexShaderPath)
 	{
+		m_listVertexShader[cnt] = std::make_shared<VertexShader>();
 		hr = m_listVertexShader[cnt]->Load((entryPath + element + fileType).c_str());
 		if (FAILED(hr))
 			return hr;
@@ -37,6 +38,7 @@ HRESULT ShaderList::Load()
 	// ピクセルシェーダ読み込み
 	for (uint8_t cnt = 0; auto & element : pixelShaderPath)
 	{
+		m_listPixelShader[cnt] = std::make_shared<PixelShader>();
 		hr = m_listPixelShader[cnt]->Load((entryPath + element + fileType).c_str());
 		if (FAILED(hr))
 			return hr;

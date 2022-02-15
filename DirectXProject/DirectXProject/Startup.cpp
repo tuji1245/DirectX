@@ -86,8 +86,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			DWORD nowTime = timeGetTime();
 			if (nowTime - preExecTime >= 1000 / 60)
 			{
-				Update();
-				Draw();
+				Update();	// 更新
+				Draw();		// 描画
+				EndFrame(); // フレーム終了処理
 				preExecTime = nowTime;
 			}
 		}

@@ -1,6 +1,5 @@
 #include "SceneBase.h"
 
-
 Scene::Scene(const char* sceneName)
 	: m_name(sceneName)
 {
@@ -17,6 +16,7 @@ Scene::~Scene()
 void Scene::EndFrame()
 {
 	// オブジェクト終了処理
+	// 破壊フラグが立っているオブジェクトをすべて破棄
 	for (auto it = m_listpObject.begin(); it != m_listpObject.end();)
 	{
 		if (!(*it)->DestroyFlag()) [[unlikely]]

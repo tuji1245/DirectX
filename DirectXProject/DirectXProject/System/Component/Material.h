@@ -49,6 +49,7 @@ public:
 			m_constantBuffer.reset(new ConstantBuffer(*ref.m_constantBuffer));	// ’l‚¾‚¯“n‚· // maybe: ‘½•ª‘åä•v
 			m_bindShaderType = ref.m_bindShaderType;
 			m_slot = ref.m_slot;
+			return *this;
 		}
 
 		/** 

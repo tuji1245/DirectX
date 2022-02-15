@@ -60,4 +60,9 @@ void Draw()
 	EndDrawDX();
 }
 
+void EndFrame()
+{
+	SCENE->EndFrame();
+}
+
 // EOF
